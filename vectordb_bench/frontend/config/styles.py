@@ -47,6 +47,7 @@ DB_TO_ICON = {
     DB.Redis: "https://assets.zilliz.com/Redis_Cloud_74b8bfef39.png",
     DB.Chroma: "https://assets.zilliz.com/chroma_ceb3f06ed7.png",
     DB.AWSOpenSearch: "https://assets.zilliz.com/opensearch_1eee37584e.jpeg",
+    DB.Shapelets: "https://agile-data-science-project-data.s3.eu-west-3.amazonaws.com/logo_.png"
 }
 
 # RedisCloud color: #0D6EFD
@@ -61,4 +62,5 @@ COLOR_MAP = {
     DB.PgVector.value: "#4C779A",
     DB.Redis.value: "#0D6EFD",
     DB.AWSOpenSearch.value: "#0DCAF0",
+    DB.Shapelets.value: "#2ECADA",
 }

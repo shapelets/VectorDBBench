@@ -37,6 +37,7 @@ class DB(Enum):
     Chroma = "Chroma"
     AWSOpenSearch = "OpenSearch"
     Test = "test"
+    Shapelets = "Shapelets"
 
 
     @property
@@ -97,6 +98,10 @@ class DB(Enum):
         if self == DB.AWSOpenSearch:
             from .aws_opensearch.aws_opensearch import AWSOpenSearch
             return AWSOpenSearch
+        
+        if self == DB.Shapelets:
+            from .shapelets.shapelets import ShapeletsClient
+            return ShapeletsClient
 
     @property
     def config_cls(self) -> Type[DBConfig]:
@@ -156,6 +161,11 @@ class DB(Enum):
         if self == DB.AWSOpenSearch:
             from .aws_opensearch.config import AWSOpenSearchConfig
             return AWSOpenSearchConfig
+        
+        if self == DB.Shapelets:
+            from .shapelets.config import ShapeletsConfig
+            return ShapeletsConfig
+
 
     def case_config_cls(self, index_type: IndexType | None = None) -> Type[DBCaseConfig]:
         if self == DB.Milvus:
